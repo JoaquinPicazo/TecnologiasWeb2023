@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+}
+
+.Calculos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 710px;
+    width: 100%;
+    background: radial-gradient(#5D99DC, #0F1995);
+}
+
+.bloque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+    margin-top: 20px;
+    background-color: #FFF0C9;    
+    border-radius: 20px;   
+    box-shadow: -10px -7px 5px black;
+}
+
+.boton{
+    background-color:greenyellow;
+}

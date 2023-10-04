@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propina - Reto 3</title>
+    <!-- Se llama al CSS externo -->
+    <link rel="stylesheet" href="../RETO-3/RETO-3.css">
+</head>
+<body>
+    <!-- Se llama al JS externo-->
+    <script src="../RETO-3/RETO-3.js"></script>
+    <!-- Div para usarlo de molde y fondo de página-->
+    <div class="Calculos">
+        <div class="bloque">
+            <div class="aux">
+                <!-- Titulo y solicitud de datos/opciones-->
+                <h1>Calculadora de Propinas</h1>
+                <br>
+                <label for="TotalBoleta">Total de boleta: </label>
+                <input class="monto" type="number" id="MontoBoleta" name="Total_Boleta">
+                <br><br>
+                <label>Porcentaje de propina: </label>
+                <select class="pp" id="PorcentajePropina">
+                    <option value="0.1">10%</option>
+                    <option value="0.15">15%</option>
+                    <option value="0.20">20%</option>
+                </select>
+                <button onclick="CalcularPropina()" class="boton">Calcular</button>
+                <br><br><br>
+                <!-- Calculos finales de propina y total a pagar -->
+                <label>Propina: <span id="propina"></span></label>
+                <br>
+                <label>Total a pagar: <span id="MontoFinal"></span></label>
+            </div>        
+        </div>        
+    </div>
+</body>
+</html>
