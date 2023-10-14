@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC - Reto 4</title>
+    <link rel="stylesheet" href="../RETO-4/RETO-4.css">
+</head>
+<body>
+    <script src="../RETO-4/RETO-4.js"></script> 
+    <div class="fondo">
+        <div class="Contenedor">
+            <div class="div-info">
+                <!--Titulo-->
+                <h1>Calculadora de IMC</h1>
+        
+                <!--Nombre al usuario-->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br><br>
+    
+                <!--Peso a usuario-->
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" name="peso"><br><br>
+    
+                <!--Altura usuario-->
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura"><br><br>
+    
+                <!--Edad usuario-->
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad"><br><br>
+    
+                <!--Genero usuario-->
+                <label id="genero">Género:</label>
+                <select>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select><br><br>
+    
+                <!--Actividad fisica usuario-->
+                <label>Actividad física:</label>
+                <select id="ActividadFisica">
+                    <option value="1.2">Sedentario</option>
+                    <option value="1.55">Moderado</option>
+                    <option value="1.9">Activo</option>
+                </select><br><br>
+    
+                <!--Boton de enviar-->
+                <button class="boton" onclick="CalcularImc()">Enviar</button>
+    
+                <h2><span id="Subtitulo"></span></h2>
+                <span id="IMC"></span><br>
+                <span id="Clasificacion"></span><br>
+                <span id="GED"></span><br>
+                <span id="EstadoNutricional"></span>
+            </div>     
+        </div>    
+    </div>
+</body>
+</html>
