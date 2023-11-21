@@ -1,0 +1,4 @@
+1) Se ingresan el nombre de la Base de Datos creada en pgadmin (ej: Integrador) y la contraseña de la Base De Datos
+2) Se ingresa a la carpeta JS desde la terminal
+3) Se ejecuta el archivo Insertar.js usando el comando "node Insertar.js"
+4) Se ejecuta la pagina web usando Live Server

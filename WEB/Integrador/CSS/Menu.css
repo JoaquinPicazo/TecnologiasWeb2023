@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    color: black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2B2E3D;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.links-navegacion {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.link {
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: inline-block;
+}
+
+.link:hover {
+    transform: translateY(-5px);
+}
+
+.contenido {
+    display: flex;
+    position: relative;
+}
+
+.contenido-celular{
+    display: none;
+}
+
+.contenido-izq, .contenido-der {
+    display: grid;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.contenido-izq {
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.contenido-der {
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+.instrucciones {
+    background-color: #aee1fb;
+    padding: 30px;
+    border-radius: 10px;
+    display: grid;
+}
+
+.titulo-instrucciones {
+    text-align: center;
+}
+
+.dificultades {
+    background-color: #aef7bf;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    align-self: flex-end;
+}
+
+.titulo-dificultades {
+    text-align: center;
+}
+
+.explicacion {
+    background-color: #f8c4cc;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.titulo-explicacion {
+    text-align: center;
+}
+
+.eleccion {
+    background-color: #f9e8a9;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+    align-self: flex-end;
+}
+
+.botones {
+    display: grid;
+    padding: 20px;
+    gap: 20px;
+    height: 100%;
+}
+
+.botones button {
+    width: 50%;
+    height: 150%;
+    margin-left: 25%;
+    border-radius: 10px;
+    background-color: #FFD166;
+    border-color: #FFD166;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+@media (max-width: 1100px) {
+    .contenido {
+        display: grid;
+        place-items: center;
+    }
+
+    .contenido-izq, .contenido-der {
+        width: 70%;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .contenido-der {
+        margin-top: 10px;
+    }
+    .contenido-izq {
+        margin-top: 20px;
+    }
+    .explicacion {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px){
+    .contenido{
+        display: none;
+    }
+
+    .contenido-celular {
+        display: flex;
+        width: 100%;
+        max-width: 600px; 
+        margin: 0 auto;
+    }
+
+    .acordeon {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 20px; 
+    }
+
+    .contenido-acordeon {
+        margin: 20px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .titulo-acordeon {
+        background-color: #f1f1f1;
+        padding: 10px;
+        cursor: pointer;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+    }
+
+    .contenido-del-acordeon {
+        display: none;
+        padding: 10px;
+    }
+
+    .acordeon-static{
+        padding:10px;
+        display: grid;
+    }
+
+    .button-container {
+        margin: 20px;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #FFD166;
+        border-color: #FFD166;
+        cursor: pointer;
+    }
+
+    .explicacion-acordeon{
+        background-color: #fbadb9;
+    }
+    .acordeon-explicacion{
+        background-color: #f8c4cc;
+    }
+
+    .instrucciones-acordeon{
+        background-color: #90d3f5;
+    }
+    .acordeon-instrucciones{
+        background-color: #aee1fb;
+    }
+
+    .dificultades-acordeon{
+        background-color: #92f7aa;
+    }
+    .acordeon-dificultades{
+        background-color: #aef7bf;
+    }
+
+    .eleccion-acordeon{
+        background-color: #f9e087;
+    }
+    .acordeon-eleccion{
+        background-color: #f9e8a9;        
+    }
+
+    .contenido-acordeon.open .contenido-del-acordeon {
+        display: block;
+    }
+
+    .contenido-acordeon.open .titulo-acordeon i {
+        transform: rotate(180deg);
+    }
+}
+
+@media screen and (max-width: 335px) {
+    .botones button {
+        font-size: 0.6em;
+    }
+}
+
+.fondo-estrellas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.estrella {
+    position: absolute;
+    width: 2px;
+    height: 2px; 
+    background: white;
+    border-radius: 50%;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}

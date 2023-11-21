@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <!-- Icono -->
+    <link rel="icon" href="../IMG/Carta.png">
+
+    <!-- Css -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/98fb854785.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../CSS/Menu.css">
+    
+    <title>Logo Match GAME - Menú</title>
+
+</head>
+<body>
+    <!-- Div para efecto de estrellas -->
+    <div class="fondo-estrellas"></div>
+    
+    <script src="../JS/Estrellas.js"></script>
+    <!-- Contenedor de fondo -->
+    <div class="background">
+        <!-- Navbar -->
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="Menu.html" class="logo"><img src="../IMG/Logo.png" alt="Logo" class="logo"></a>
+            <!-- Enlaces -->
+            <div class="links-navegacion">
+                <a href="Menu.html" class="link"><i class="fa-solid fa-house"></i> <b>Inicio</b></a>
+                <a href="Puntajes.html" class="link"><i class="fas fa-poll"></i> Puntajes</a>
+            </div>
+        </div>
+        <!-- Contenido página-->
+        <div class="contenido">
+            <!-- Columna izquierda-->
+            <div class="contenido-izq">
+                <!-- Instrucciones -->
+                <div class="instrucciones">
+                    <div class="titulo-instrucciones">
+                        <h3><i class="fa-solid fa-book"></i> Instrucciones</h3><br>
+                    </div>
+                    <div class="contenido-instrucciones">
+                        <p>En este juego de emparejamiento de cartas, cada carta está decorada con un distintivo logo 
+                            de un lenguaje de programación. Para revelar el contenido de una carta, simplemente haz clic 
+                            en ella. Si las dos cartas que elijas coinciden, obtendrás 10 puntos. Si no coinciden, las 
+                            cartas se darán vuelta de nuevo y podrás seguir intentando sin que se reduzca tu puntaje.
+                            El juego incluye un límite de tiempo, el cual representa el plazo para encontrar todos los 
+                            pares. Si no logras encontrar todos los pares antes de que se agote el tiempo, pierdes. Por 
+                            otro lado, si encuentras todos los pares antes de que se acabe el tiempo, ganas el juego. Cabe 
+                            recordar que cada nivel de dificultad implica una cantidad específica de cartas y un límite de 
+                            tiempo distinto, lo que añade un desafío adicional al juego.
+                        </p>
+                    </div> 
+                </div>
+                <!-- Dificultades -->
+                <div class="dificultades">
+                    <div class="titulo-dificultades">
+                        <h3><i class="fa-regular fa-chart-bar"></i> Dificultades</h3><br>
+                    </div>
+                    <div class="contenido-dificultades">
+                        <p>
+                            <b>Fácil</b>: 4 cartas  y tiempo límite de 10 segundos.<br>
+                            <b>Medio</b>: 6 cartas y  tiempo límite de 15 segundos. <b>Pierdes 1 segundo</b> si te equivocas.<br>
+                            <b>Difícil</b>: 8 cartas y tiempo límite de 14 segundos.<b> Pierdes 3 segundos</b> si te equivocas.<br> 
+                            ¡Experiméntalas todas!
+                        </p>
+                    </div>  
+                </div>
+            </div>
+            <!-- Columna derecha -->
+            <div class="contenido-der">
+                <!-- ¿Por qué jugar al memorice? -->
+                <div class="explicacion">
+                    <div class="titulo-explicacion">
+                        <h3><i class="fa-solid fa-brain"></i> ¿Por qué jugar al memorice?</h3><br>
+                    </div>
+                    <div class="contenido-explicacion">
+                        <p>
+                            Jugar al memorice estimula la memoria, la concentración y la atención, mejorando 
+                            la función cerebral. También actúa como una distracción relajante que reduce el 
+                            estrés y la ansiedad, al mismo tiempo que fortalece la resolución de problemas, 
+                            el razonamiento y la planificación estratégica a través del ejercicio de retención 
+                            de información.
+                        </p>
+                    </div>   
+                </div>
+                <!-- Elección de dificultad con botones -->
+                <div class="eleccion">
+                    <h3><i class="fa-solid fa-gamepad"></i> ¡Elige tu dificultad!</h3><br>
+                    <div class="botones">
+                        <button onclick="window.location.href='Facil.html'"><i class="fa-solid fa-face-smile"></i> Fácil</button>
+                        <button onclick="window.location.href='Medio.html'"><i class="fa-solid fa-face-meh"></i> Medio</button>
+                        <button onclick="window.location.href='Dificil.html'"><i class="fa-solid fa-face-angry"></i> Difícil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interfaz que se muestra solo para pantallas de celular, de lo contrario permanece oculto-->
+        <!-- Es lo mismo que el primer menú, solo que con formato de "acordeón"-->
+        <div class="contenido-celular">       
+            <div class="acordeon">
+                <div class="contenido-acordeon">
+                    <div class="titulo-acordeon explicacion-acordeon" onclick="EfectoAcordeon(this)"><h4><i class="fa-solid fa-brain"></i> ¿Por qué jugar al memorice?  <i class="fas fa-chevron-down"></i></h4></div>
+                    <div class="contenido-del-acordeon acordeon-explicacion">
+                        Jugar al memorice estimula la memoria, la concentración y la atención, mejorando 
+                        la función cerebral. También actúa como una distracción relajante que reduce el 
+                        estrés y la ansiedad, al mismo tiempo que fortalece la resolución de problemas, 
+                        el razonamiento y la planificación estratégica a través del ejercicio de retención 
+                        de información.
+                    </div>
+                </div>
+                <div class="contenido-acordeon">
+                    <div class="titulo-acordeon instrucciones-acordeon" onclick="EfectoAcordeon(this)"><h4><i class="fa-solid fa-book"></i> Instrucciones  <i class="fas fa-chevron-down"></i></h4></div>
+                    <div class="contenido-del-acordeon acordeon-instrucciones">
+                        En este juego de emparejamiento de cartas, cada carta está decorada con un distintivo logo 
+                        de un lenguaje de programación. Para revelar el contenido de una carta, simplemente haz clic 
+                        en ella. Si las dos cartas que elijas coinciden, obtendrás 10 puntos. Si no coinciden, las 
+                        cartas se darán vuelta de nuevo y podrás seguir intentando sin que se reduzca tu puntaje.
+                        El juego incluye un límite de tiempo, el cual representa el plazo para encontrar todos los 
+                        pares. Si no logras encontrar todos los pares antes de que se agote el tiempo, pierdes. Por 
+                        otro lado, si encuentras todos los pares antes de que se acabe el tiempo, ganas el juego. Cabe 
+                        recordar que cada nivel de dificultad implica una cantidad específica de cartas y un límite de 
+                        tiempo distinto, lo que añade un desafío adicional al juego.
+                    </div>
+                </div>
+                <div class="contenido-acordeon">
+                    <div class="titulo-acordeon dificultades-acordeon" onclick="EfectoAcordeon(this)"><h4><i class="fa-regular fa-chart-bar"></i> Dificultades  <i class="fas fa-chevron-down"></i></h4></div>
+                    <div class="contenido-del-acordeon acordeon-dificultades">
+                        <b>Fácil</b>: 4 cartas  y tiempo límite de 10 segundos.<br>
+                        <b>Medio</b>: 6 cartas y  tiempo límite de 15 segundos. <b>Pierdes 1 segundo</b> si te equivocas.<br>
+                        <b>Difícil</b>: 8 cartas y tiempo límite de 14 segundos.<b> Pierdes 3 segundos</b> si te equivocas.<br> 
+                        ¡Experiméntalas todas!
+                    </div>
+                </div>
+                <div class="contenido-acordeon acordeon-eleccion">
+                    <div class="titulo-acordeon eleccion-acordeon" onclick="EfectoAcordeon(this)"><h4><i class="fa-solid fa-gamepad"></i> ¡Elige tu dificultad!</h4></div>
+                    <div class="acordeon-static button-container">
+                        <button class="button" onclick="window.location.href='Facil.html'"><i class="fa-solid fa-face-smile"></i> Fácil</button>
+                        <button class="button" onclick="window.location.href='Medio.html'"><i class="fa-solid fa-face-meh"></i> Medio</button>
+                        <button class="button" onclick="window.location.href='Dificil.html'"><i class="fa-solid fa-face-angry"></i> Difícil</button>
+                    </div>
+                </div>
+            </div>
+            <script src="../JS/AccordionMenu.js"></script>
+        </div>
+    </div>
+</body>
+</html>

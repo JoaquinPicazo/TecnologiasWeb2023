@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Icono -->
+    <link rel="icon" href="../IMG/Carta.png">
+    <link rel="stylesheet" href="../CSS/Puntajes.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Match GAME - Puntajes</title>
+    <script src="https://kit.fontawesome.com/98fb854785.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="fondo-estrellas"></div>
+    <script src="../JS/Estrellas.js"></script>
+    <!-- Contenedor de fondo -->
+    <div class="background">
+        <!-- Navbar -->
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="Menu.html" class="logo"><img src="../IMG/Logo.png" alt="Logo" class="logo"></a>
+            <!-- Enlaces -->
+            <div class="links-navegacion">
+                <a href="Menu.html" class="link"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="Puntajes.html" class="link"><i class="fas fa-poll"></i> <b>Puntajes</b></a>
+            </div>
+        </div>
+        <!-- Contenido página-->
+        <div class="contenido">
+            <!-- Tabla 1 -->
+            <div class="tabla1">
+                
+                <h3>Fácil</h3>
+                
+                <table>
+                    <tr>                     
+                        <th><i class="fas fa-trophy"></i> Lugar</th>
+                        <th><i class="fas fa-user"></i> Nickname</th>
+                        <th><i class="fa-solid fa-clock"></i> Tiempo restante</th>
+                    </tr>
+                    <tbody id="data-table"></tbody>
+                </table>
+                
+                <script>
+                    fetch('http://localhost:3000/Facildata') // Asegúrate de reemplazar con la ruta correcta de tu servidor
+                        .then(response => response.json())
+                        .then(data => {
+                            const dataTable = document.getElementById('data-table');
+                            let lugarCount = 1;
+
+                            data.forEach(item => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td><b>${lugarCount}</b></td>
+                                    <td>${item.nickname}</td>
+                                    <td>${item.tiempo}</td>
+                                    <!-- Agrega más <td> para más columnas según tus campos -->
+                                `;
+                                dataTable.appendChild(row);
+                                lugarCount++;
+                                if (lugarCount > 5) {
+                                    lugarCount = 1; // Resetear a 1 si supera 5
+                                }
+                            });
+                        })
+                        .catch(error => console.error('Error al obtener los datos:', error));
+                </script>
+            </div>
+            <!-- Tabla 2 -->
+            <div class="tabla2">
+                
+                <h3>Medio</h3>
+                
+                <table>
+                    <tr>                     
+                        <th><i class="fas fa-trophy"></i> Lugar</th>
+                        <th><i class="fas fa-user"></i> Nickname</th>
+                        <th><i class="fa-solid fa-clock"></i> Tiempo restante</th>
+                    </tr>
+                    <tbody id="data-table1"></tbody>
+                </table>
+                
+                <script>
+                    fetch('http://localhost:3000/Mediodata') // Asegúrate de reemplazar con la ruta correcta de tu servidor
+                        .then(response => response.json())
+                        .then(data => {
+                            const dataTable = document.getElementById('data-table1');
+                            let lugarCount = 1;
+
+                            data.forEach(item => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td><b>${lugarCount}</b></td>
+                                    <td>${item.nickname}</td>
+                                    <td>${item.tiempo}</td>
+                                    <!-- Agrega más <td> para más columnas según tus campos -->
+                                `;
+                                dataTable.appendChild(row);
+                                lugarCount++;
+                                if (lugarCount > 5) {
+                                    lugarCount = 1; // Resetear a 1 si supera 5
+                                }
+                            });
+                        })
+                        .catch(error => console.error('Error al obtener los datos:', error));
+                </script>
+            </div>
+            <!-- Tabla 3 -->
+            <div class="tabla3">
+                
+                <h3>Dificil</h3>
+                
+                <table>
+                    <tr>                     
+                        <th><i class="fas fa-trophy"></i> Lugar</th>
+                        <th><i class="fas fa-user"></i> Nickname</th>
+                        <th><i class="fa-solid fa-clock"></i> Tiempo restante</th>
+                    </tr>
+                    <tbody id="data-table2"></tbody>
+                </table>
+                
+                <script>
+                    fetch('http://localhost:3000/Dificildata') // Asegúrate de reemplazar con la ruta correcta de tu servidor
+                        .then(response => response.json())
+                        .then(data => {
+                            const dataTable = document.getElementById('data-table2');
+                            let lugarCount = 1;
+
+                            data.forEach(item => {
+                                const row = document.createElement('tr');
+                                row.innerHTML = `
+                                    <td><b>${lugarCount}</b></td>
+                                    <td>${item.nickname}</td>
+                                    <td>${item.tiempo}</td>
+                                    <!-- Agrega más <td> para más columnas según tus campos -->
+                                `;
+                                dataTable.appendChild(row);
+                                lugarCount++;
+                                if (lugarCount > 5) {
+                                    lugarCount = 1; // Resetear a 1 si supera 5
+                                }
+                            });
+                        })
+                        .catch(error => console.error('Error al obtener los datos:', error));
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

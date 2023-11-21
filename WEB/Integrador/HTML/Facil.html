@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS y fontawesome-->
+    <link rel="stylesheet" href="../CSS/Facil.css">
+    <script src="https://kit.fontawesome.com/98fb854785.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="../IMG/Carta.png">
+    <title>Fácil - Logo Match</title>
+</head>
+<!-- Body -->
+<body>
+    <div class="fondo-estrellas"></div>
+    <script src="../JS/Estrellas.js"></script>
+    <!-- Pantalla completa-->
+    <div class="background">
+        <!-- Barra de navegación ----------------------------------------------------------------->
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="Menu.html" class="logo"><img src="../IMG/Logo.png" alt="Logo" class="logo"></a>
+            <!-- Enlaces -->
+            <div class="links-navegacion">
+                <a href="Menu.html" class="link"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="Puntajes.html" class="link"><i class="fas fa-poll"></i> Puntajes</a>
+            </div>
+        </div>
+
+        <!-- Contenido página web ------------------------------------------------------------------>
+        <div class="contenido">
+            <!-- Parte superior (Puntaje, Tiempo, etc...) ------------------------------------------------------------------>
+            <div class="superior">
+                <!-- Dificultad -->
+                <div class="dificultad">
+                    <label><i class="fa-solid fa-face-smile"></i> Dificultad: Fácil</i></label>
+                </div>
+                <!-- Puntaje Jugador-->
+                <div class="puntaje">
+                    <label><i class="fa-solid fa-trophy"></i> Puntaje: <span id="score">0</span></label>
+                </div>
+                <!-- Tiempo restante -->
+                <div class="tiempo">
+                    <label><i class="fa-solid fa-stopwatch" style="color: #050505;"></i> Tiempo: <span id="time"></span></label>
+                </div>
+                <!-- Boton para reiniciar -->
+                <div class="restart">
+                    <button class="boton-restart" onclick="reiniciar()"><i class="fa-solid fa-rotate-left"></i> Reiniciar</button>
+                </div>
+            </div>
+
+            <!-- Parte inferior (tablero) ------------------------------------------------------------------------------------>
+            <div class="inferior">
+                <div class="tablero">
+                    <div class="subtablero">
+                        <table>
+                            <!-- Cartas -->
+                            <tr>
+                                <td><button class="carta" style="background-color: black" id="1" onclick="DarVuelta(1)"></button></td>
+                                <td><button class="carta" style="background-color: black" id="2" onclick="DarVuelta(2)"></button></td>
+                            </tr>
+                            <tr>
+                                <td><button  class="carta" style="background-color: black" id="3" onclick="DarVuelta(3)"></button></td>
+                                <td><button  class="carta" style="background-color: black" id="4" onclick="DarVuelta(4)"></button></td>
+                            </tr>
+                        </table> 
+                        <!-- JS externo -->
+                        <script src="../JS/Facil.js"></script>            
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+        <!-- Ventana victoria ------------------------------------------------------>
+        <div id="victoria" class="ganar">
+            <div class="ganar-contenido">
+                <img src="../IMG/Trofeo.png">
+                <p>¡Felicitaciones, has ganado! &#x1F642;</p>
+                <p>Tu puntaje ha sido: <span class="puntajeFinal" id="puntajeFinal"></span></p>
+                <p>Tiempo restante: <span class="tiempoRestante" id="tiempoRestante"></span></p>
+                <br>
+                <div class="contenedor-botones">
+                    <button class="reiniciar" onclick="reiniciar()"><i class="fa-solid fa-rotate-left"></i> Volver a jugar</button>
+                    <button class="inicio" onclick="inicio()"><i class="fa-solid fa-house"></i> Inicio</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana derrota -------------------------------------------------------->
+        <div id="derrota" class="perder">
+            <div class="perder-contenido">
+                <img src="../IMG/Reloj.png">
+                <p>¡Se te ha acabado del tiempo!&#x1F641;</p>
+                <p>Tu puntaje ha sido: <span class="puntajeFinal" id="puntajeFinalDerrota"></span></p>
+                <p>¡Puedes intentarlo nuevamente!</p>
+                <br>
+                <div class="contenedor-botones">
+                    <button class="reiniciar" onclick="reiniciar()"><i class="fa-solid fa-rotate-left"></i> Volver a jugar</button>
+                    <button class="inicio" onclick="inicio()"><i class="fa-solid fa-house"></i> Inicio</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ventana solicitud de nickname ------------------------------------------->
+        <div class="solicitud-nombre" id="solicitud">
+            <div class="solicitud-contenido">
+                <div class="aux">
+                    <form class="arriba">
+                        <img src="../IMG/Perfil.png">
+                        <label for="nombreJugador">Nickname:</label>
+                        <input type="text" id="nombreJugador" name="nickname" class="input-submit" placeholder="Master123">
+                        <button type="submit" class="boton-submit" onclick="IniciarJuego()">JUGAR</button>
+                    </form>
+                    <div class="abajo">
+                        <button class="volverInicio" onclick="inicio()"><i class="fa-solid fa-house"></i></button>
+                    </div> 
+                </div>                                 
+            </div>
+        </div>
+</body>
+</html>
