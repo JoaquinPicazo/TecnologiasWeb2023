@@ -11,8 +11,8 @@ app.use(express.json());
 // Conectar la base de datos con postgresql
 const client = new Client({
   user: 'postgres',
-  database: ' ', //Nombre base de datos
-  password: ' ', // Contraseña base de datos
+  database: 'integrador', //Nombre base de datos
+  password: 'elmaspropvp', // Contraseña base de datos
   port: 5432,
 });
 
