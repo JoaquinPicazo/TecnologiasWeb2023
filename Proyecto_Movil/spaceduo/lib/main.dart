@@ -1,5 +1,7 @@
 // Se sugiere utilizar prefer_const_constructors, sort_child_properties_last, etc.
 
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last, use_build_context_synchronously, non_constant_identifier_names, sized_box_for_whitespace, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:spaceduo/ConexionFirebase.dart';

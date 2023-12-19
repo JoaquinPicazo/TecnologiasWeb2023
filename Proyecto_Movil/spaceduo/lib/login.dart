@@ -286,7 +286,7 @@ class _LoginState extends State<Login> {
         // Mostrar alerta si el usuario no existe en la base de datos
         setState(() {
           alerta =
-              'No existe ese usuario en mi base de datos, revisar la variable que pasa entre interfaces';
+              'Usuario no encontrado.';
         });
       }
     } catch (e) {

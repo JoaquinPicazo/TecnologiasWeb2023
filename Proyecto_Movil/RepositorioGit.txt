@@ -1,0 +1,4 @@
+GIT: https://github.com/JoaquinPicazo/TecnologiasWeb2023/tree/main/Proyecto_Movil
+
+Solo subi algunos archivos, ya que UlagosVirtual tiene un límite y no me dejó subir toda la carpeta del proyecto.
+Pero el proyecto completo está en el repositorio de Git adjuntado arriba.
