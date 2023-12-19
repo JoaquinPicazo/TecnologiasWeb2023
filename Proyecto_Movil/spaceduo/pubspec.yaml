@@ -1,0 +1,39 @@
+name: spaceduo
+description: "A new Flutter project."
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: '>=3.2.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.24.2
+  cloud_firestore: ^4.13.5
+  flip_card: ^0.7.0
+  firebase_auth: ^4.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/APROBADO.png
+    - assets/LOGIN.jpg
+    - assets/SIGNUP.png
+    - assets/MENU.jpg
+    - assets/INSTRUCCIONES.jpg
+    - assets/RECUPERAR.jpg
+    - assets/BACK.png
+    - assets/P1.png
+    - assets/P2.png
+    - assets/P3.png
+    - assets/P4.png
+    - assets/PARTIDA.jpg
+    - assets/VICTORIA.jpg
+    - assets/DERROTA.jpg
+    - assets/LOGO.png

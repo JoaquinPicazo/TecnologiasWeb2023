@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057935139437",
+    "project_id": "memoricemobile-9ecd2",
+    "storage_bucket": "memoricemobile-9ecd2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057935139437:android:d5dcb1640b32fe72ab1564",
+        "android_client_info": {
+          "package_name": "ulagos.spaceduo.spaceduo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzOpXq1lQDRPiDSxI5gg6pLN6T6QJEHPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
